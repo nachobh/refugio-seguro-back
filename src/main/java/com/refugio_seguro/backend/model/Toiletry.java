@@ -1,21 +1,19 @@
 package com.refugio_seguro.backend.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
 import lombok.*;
 
-@AllArgsConstructor
-@NoArgsConstructor
 @Getter
 @Setter
-@ToString
 @Entity
+@ToString
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = DatabaseConstants.TOILETRY_TABLE_NAME)
 public class Toiletry {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = DatabaseConstants.TOILETRY_COLUMN_ID_NAME, nullable = false)
     private java.lang.Long id;
 

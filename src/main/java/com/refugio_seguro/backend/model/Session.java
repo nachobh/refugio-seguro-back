@@ -5,15 +5,16 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.*;
 
-@AllArgsConstructor
-@NoArgsConstructor
 @Getter
 @Setter
-@ToString
 @Entity
+@ToString
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = DatabaseConstants.SESSION_TABLE_NAME)
 public class Session {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = DatabaseConstants.SESSION_COLUMN_ID_NAME, nullable = false)
     private java.lang.Long id;
 
@@ -29,6 +30,7 @@ public class Session {
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "USER_ID", nullable = false)
+    @ToString.Exclude
     private User user;
 
 }

@@ -5,15 +5,16 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.*;
 
-@AllArgsConstructor
-@NoArgsConstructor
 @Getter
 @Setter
-@ToString
 @Entity
+@ToString
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = DatabaseConstants.SHELTER_TABLE_NAME)
 public class Shelter {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = DatabaseConstants.SHELTER_COLUMN_ID_NAME, nullable = false)
     private java.lang.Long id;
 
