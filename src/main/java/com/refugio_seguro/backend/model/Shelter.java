@@ -5,6 +5,9 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.*;
 
+import java.util.LinkedHashSet;
+import java.util.Set;
+
 @Getter
 @Setter
 @Entity
@@ -31,6 +34,10 @@ public class Shelter {
     @NotNull
     @Column(name = DatabaseConstants.SHELTER_COLUMN_MAXCAPACITY_NAME, nullable = false)
     private java.lang.Integer maxCapacity;
+
+    @NotNull
+    @Column(name = DatabaseConstants.SHELTER_COLUMN_PHONENUMBER_NAME, nullable = false)
+    private Long phoneNumber;
 
     @NotNull
     @Column(name = DatabaseConstants.SHELTER_COLUMN_CURRENTAVAILABILITY_NAME, nullable = false)
@@ -67,5 +74,8 @@ public class Shelter {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "TOILETRIES_ID", nullable = false)
     private Toiletry toiletries;
+
+    @OneToMany(mappedBy = "shelter")
+    private Set<ShelterUpdate> shelterUpdates = new LinkedHashSet<>();
 
 }
