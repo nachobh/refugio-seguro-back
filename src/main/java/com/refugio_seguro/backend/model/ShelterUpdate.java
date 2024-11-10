@@ -16,15 +16,15 @@ public class ShelterUpdate {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = DatabaseConstants.SHELTERUPDATE_COLUMN_ID_NAME, nullable = false)
-    private java.lang.Long id;
+    private Long id;
 
     @Size(max = 4000)
     @Column(name = DatabaseConstants.SHELTERUPDATE_COLUMN_SHELTERFROM_NAME, length = 4000)
-    private java.lang.String shelterFrom;
+    private String shelterFrom;
 
     @Size(max = 4000)
     @Column(name = DatabaseConstants.SHELTERUPDATE_COLUMN_SHELTERTO_NAME, length = 4000)
-    private java.lang.String shelterTo;
+    private String shelterTo;
 
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY, optional = false)

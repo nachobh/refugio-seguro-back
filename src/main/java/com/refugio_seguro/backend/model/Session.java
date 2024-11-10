@@ -16,12 +16,12 @@ public class Session {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = DatabaseConstants.SESSION_COLUMN_ID_NAME, nullable = false)
-    private java.lang.Long id;
+    private Long id;
 
     @Size(max = 255)
     @NotNull
     @Column(name = DatabaseConstants.SESSION_COLUMN_TOKEN_NAME, nullable = false)
-    private java.lang.String token;
+    private String token;
 
     @NotNull
     @Column(name = DatabaseConstants.SESSION_COLUMN_VALIDUNTIL_NAME, nullable = false)

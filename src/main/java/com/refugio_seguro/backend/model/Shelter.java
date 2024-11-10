@@ -19,41 +19,37 @@ public class Shelter {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = DatabaseConstants.SHELTER_COLUMN_ID_NAME, nullable = false)
-    private java.lang.Long id;
+    private Long id;
 
     @Size(max = 255)
     @NotNull
     @Column(name = DatabaseConstants.SHELTER_COLUMN_NAME_NAME, nullable = false)
-    private java.lang.String name;
+    private String name;
 
     @Size(max = 255)
     @NotNull
     @Column(name = DatabaseConstants.SHELTER_COLUMN_PHONE_NUMBER_NAME, nullable = false)
-    private java.lang.String phoneNumber;
+    private String phoneNumber;
 
     @NotNull
     @Column(name = DatabaseConstants.SHELTER_COLUMN_MAXCAPACITY_NAME, nullable = false)
-    private java.lang.Integer maxCapacity;
-
-    @NotNull
-    @Column(name = DatabaseConstants.SHELTER_COLUMN_PHONENUMBER_NAME, nullable = false)
-    private Long phoneNumber;
+    private Integer maxCapacity;
 
     @NotNull
     @Column(name = DatabaseConstants.SHELTER_COLUMN_CURRENTAVAILABILITY_NAME, nullable = false)
-    private java.lang.Integer currentAvailability;
+    private Integer currentAvailability;
 
     @NotNull
     @Column(name = DatabaseConstants.SHELTER_COLUMN_ROOMSQTY_NAME, nullable = false)
-    private java.lang.Integer roomsQty;
+    private Integer roomsQty;
 
     @NotNull
     @Column(name = DatabaseConstants.SHELTER_COLUMN_BATHSQTY_NAME, nullable = false)
-    private java.lang.Integer bathsQty;
+    private Integer bathsQty;
 
     @NotNull
     @Column(name = DatabaseConstants.SHELTER_COLUMN_WASHINGMACHINESQTY_NAME, nullable = false)
-    private java.lang.Integer washingMachinesQty;
+    private Integer washingMachinesQty;
 
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
