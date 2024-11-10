@@ -43,6 +43,7 @@ public class DatabaseConstants {
     public static final String SHELTER_TABLE_NAME = "shelter";
     public static final String SHELTER_COLUMN_ID_NAME = "ID";
     public static final String SHELTER_COLUMN_NAME_NAME = "NAME";
+    public static final String SHELTER_COLUMN_PHONE_NUMBER_NAME = "PHONE_NUMBER";
     public static final String SHELTER_COLUMN_MAXCAPACITY_NAME = "MAX_CAPACITY";
     public static final String SHELTER_COLUMN_CURRENTAVAILABILITY_NAME = "CURRENT_AVAILABILITY";
     public static final String SHELTER_COLUMN_ROOMSQTY_NAME = "ROOMS_QTY";
