@@ -22,6 +22,11 @@ public class Shelter {
     @Column(name = DatabaseConstants.SHELTER_COLUMN_NAME_NAME, nullable = false)
     private java.lang.String name;
 
+    @Size(max = 255)
+    @NotNull
+    @Column(name = DatabaseConstants.SHELTER_COLUMN_PHONE_NUMBER_NAME, nullable = false)
+    private java.lang.String phoneNumber;
+
     @NotNull
     @Column(name = DatabaseConstants.SHELTER_COLUMN_MAXCAPACITY_NAME, nullable = false)
     private java.lang.Integer maxCapacity;
