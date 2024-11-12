@@ -15,11 +15,11 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfiguration {
 
 
-    @Bean
-    public WebSecurityCustomizer webSecurityCustomizer() {
-        return (web) -> web.ignoring().requestMatchers("/ **");
-    }
-
+//    @Bean
+//    public WebSecurityCustomizer webSecurityCustomizer() {
+//        return (web) -> web.ignoring().requestMatchers("/**");
+//    }
+//
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.securityMatcher("/ **")

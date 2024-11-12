@@ -15,7 +15,7 @@ public class Food {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = DatabaseConstants.FOOD_COLUMN_ID_NAME, nullable = false)
-    private Integer id;
+    private Long id;
 
     @Column(name = DatabaseConstants.FOOD_COLUMN_FRUITQTY_NAME)
     private Integer fruitQty;
