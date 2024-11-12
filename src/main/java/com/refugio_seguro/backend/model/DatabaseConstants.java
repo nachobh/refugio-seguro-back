@@ -72,6 +72,7 @@ public class DatabaseConstants {
     public static final String USER_COLUMN_NAME_NAME = "NAME";
     public static final String USER_COLUMN_EMAIL_NAME = "EMAIL";
     public static final String USER_COLUMN_PASSWORD_NAME = "PASSWORD";
+    public static final String SHELTER_COLUMN_PHONENUMBER_NAME = "PHONE_NUMBER";
 
 
 }

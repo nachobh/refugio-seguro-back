@@ -1,59 +1,57 @@
 package com.refugio_seguro.backend.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
 import lombok.*;
 
-@AllArgsConstructor
-@NoArgsConstructor
 @Getter
 @Setter
-@ToString
 @Entity
+@ToString
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = DatabaseConstants.TOILETRY_TABLE_NAME)
 public class Toiletry {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = DatabaseConstants.TOILETRY_COLUMN_ID_NAME, nullable = false)
-    private java.lang.Long id;
+    private Long id;
 
     @Column(name = DatabaseConstants.TOILETRY_COLUMN_WCPAPER_NAME)
-    private java.lang.Integer wcPaper;
+    private Integer wcPaper;
 
     @Column(name = DatabaseConstants.TOILETRY_COLUMN_TISSUES_NAME)
-    private java.lang.Integer tissues;
+    private Integer tissues;
 
     @Column(name = DatabaseConstants.TOILETRY_COLUMN_PADS_NAME)
-    private java.lang.Integer pads;
+    private Integer pads;
 
     @Column(name = DatabaseConstants.TOILETRY_COLUMN_TAMPONS_NAME)
-    private java.lang.Integer tampons;
+    private Integer tampons;
 
     @Column(name = DatabaseConstants.TOILETRY_COLUMN_SHOWERGEL_NAME)
-    private java.lang.Integer showerGel;
+    private Integer showerGel;
 
     @Column(name = DatabaseConstants.TOILETRY_COLUMN_HANDSOAP_NAME)
-    private java.lang.Integer handSoap;
+    private Integer handSoap;
 
     @Column(name = DatabaseConstants.TOILETRY_COLUMN_SHAMPOO_NAME)
-    private java.lang.Integer shampoo;
+    private Integer shampoo;
 
     @Column(name = DatabaseConstants.TOILETRY_COLUMN_SHAVINGSOAP_NAME)
-    private java.lang.Integer shavingSoap;
+    private Integer shavingSoap;
 
     @Column(name = DatabaseConstants.TOILETRY_COLUMN_RAZORS_NAME)
-    private java.lang.Integer razors;
+    private Integer razors;
 
     @Column(name = DatabaseConstants.TOILETRY_COLUMN_BABYDIAPERS_NAME)
-    private java.lang.Integer babyDiapers;
+    private Integer babyDiapers;
 
     @Column(name = DatabaseConstants.TOILETRY_COLUMN_ADULTDIAPERS_NAME)
-    private java.lang.Integer adultDiapers;
+    private Integer adultDiapers;
 
     @Size(max = 4000)
     @Column(name = DatabaseConstants.TOILETRY_COLUMN_OTHER_NAME, length = 4000)
-    private java.lang.String other;
+    private String other;
 
 }
